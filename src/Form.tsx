@@ -14,11 +14,7 @@ export function Form() {
             type="text"
             value={state.name}
             onChange={e =>
-              dispatch({
-                type: "set value",
-                name: "name",
-                value: e.target.value
-              })
+              dispatch({ type: "set state", value: { name: e.target.value } })
             }
           />
         </label>
@@ -31,11 +27,7 @@ export function Form() {
             type="email"
             value={state.email}
             onChange={e =>
-              dispatch({
-                type: "set value",
-                name: "email",
-                value: e.target.value
-              })
+              dispatch({ type: "set state", value: { email: e.target.value } })
             }
           />
         </label>
@@ -49,9 +41,8 @@ export function Form() {
             value={state.age}
             onChange={e =>
               dispatch({
-                type: "set value",
-                name: "age",
-                value: Number(e.target.value)
+                type: "set state",
+                value: { age: Number(e.target.value) }
               })
             }
           />
@@ -66,9 +57,8 @@ export function Form() {
             checked={state.retired}
             onChange={e =>
               dispatch({
-                type: "set value",
-                name: "retired",
-                value: !state.retired
+                type: "set state",
+                value: { retired: !state.retired }
               })
             }
           />
