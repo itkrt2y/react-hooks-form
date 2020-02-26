@@ -3,7 +3,7 @@ const { useReducer } = React;
 import { render } from "react-dom";
 import { Form } from "./Form";
 import { reducer, initState } from "./store";
-import { FormContext } from "./FormContext";
+import { FormContext } from "./contexts";
 
 export function App() {
   const [state, dispatch] = useReducer(reducer, initState);
